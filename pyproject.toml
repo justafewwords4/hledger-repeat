@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hledger-repeat"
+version = "0.0.1"
+description = ""
+authors = ["Felipe <104157442+justafewwords4@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "hledger_repeat"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = {extras = ["all"], version = "^0.9.0"}
+textual = {extras = ["dev"], version = "^0.28.1"}
+
+[tool.poetry.scripts]
+hrepeat = "hledger_repeat.app:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
